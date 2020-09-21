@@ -182,3 +182,6 @@ def name(country,name):
     mylist = zip(source, news, desc, cont, img, link,time)
     print(mylist)
     return render_template('index.html', context=mylist)    
+
+if __name__ == "__main__":
+    app.run()
