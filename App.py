@@ -52,8 +52,10 @@ def bbc():
     link = []
     time = []
     cont = []
+    lin = []
 
     for i in range(len(articles)):
+        lin.append(articles[i]['url'].rsplit('/', 1)[-1])
         myarticles = articles[i]
         source.append(myarticles['author'])
         news.append(myarticles['title'])
@@ -63,9 +65,9 @@ def bbc():
         link.append(myarticles['url'])
         time.append(myarticles['publishedAt'])
 
-    mylist = zip(source, news, desc, cont, img, link,time)
+    mylist = zip(source, news, desc, cont, img, link,time,lin)
 
-    return render_template('index.html', context=mylist)
+    return render_template('home.html', context=mylist)
 
 @app.route('/wsj')
 def wsj():
@@ -73,7 +75,7 @@ def wsj():
     topheadlines = newsapi.get_everything(domains="wsj.com")
 
     articles = topheadlines['articles']
-
+    wsj = "wsj"
     desc = []
     news = []
     img = []
@@ -81,8 +83,12 @@ def wsj():
     link = []
     time = []
     cont = []
+    lin = []
 
     for i in range(len(articles)):
+        var = articles[i]['url'].rsplit('/', 1)[-1]
+        var1 = "/".join([wsj,var])
+        lin.append(var1)
         myarticles = articles[i]
         source.append(myarticles['author'])
         news.append(myarticles['title'])
@@ -92,9 +98,9 @@ def wsj():
         link.append(myarticles['url'])
         time.append(myarticles['publishedAt'])
 
-    mylist = zip(source, news, desc, cont, img, link,time)
+    mylist = zip(source, news, desc, cont, img, link,time,lin)
 
-    return render_template('index.html', context=mylist)
+    return render_template('home.html', context=mylist)
 
 @app.route('/techcrunch')
 def tech():
@@ -110,8 +116,12 @@ def tech():
     link = []
     time = []
     cont = []
+    lin = []
 
     for i in range(len(articles)):
+        var = articles[i]['url'].rsplit('/', 1)[-1]
+        var1 = "/".join(["techcrunch",var])
+        lin.append(var1)
         myarticles = articles[i]
         source.append(myarticles['author'])
         news.append(myarticles['title'])
@@ -121,7 +131,41 @@ def tech():
         link.append(myarticles['url'])
         time.append(myarticles['publishedAt'])
 
-    mylist = zip(source, news, desc, cont, img, link,time)
+    mylist = zip(source, news, desc, cont, img, link, time, lin)
+
+    return render_template('home.html', context=mylist)
+
+@app.route('/google/<string:news>')
+def techpost(news):
+    newsapi = NewsApiClient(api_key="56f7ee8f6b4143269d9d2ac534374cbb")
+    topheadlines = newsapi.get_top_headlines(sources="google-news-in")
+
+    articles = topheadlines['articles']
+
+    desc = []
+    news = []
+    img = []
+    source = []
+    link = []
+    time = []
+    cont = []
+    lin = []
+
+    for i in range(len(articles)):
+        var = articles[i]['url'].rsplit('/', 1)[-1]
+        var1 = "/".join(["google",var])
+        lin.append(var1)
+        if f"{news}" in lin:
+            myarticles = articles[i]
+            source.append(myarticles['author'])
+            news.append(myarticles['title'])
+            desc.append(myarticles['description'])
+            cont.append(myarticles['content'])
+            img.append(myarticles['urlToImage'])
+            link.append(myarticles['url'])
+            time.append(myarticles['publishedAt'])
+
+    mylist = zip(source, news, desc, cont, img, link, time, lin)
 
     return render_template('index.html', context=mylist)
 
@@ -139,8 +183,12 @@ def google():
     link = []
     time = []
     cont = []
+    lin = []
 
     for i in range(len(articles)):
+        var = articles[i]['url'].rsplit('/', 1)[-1]
+        var1 = "/".join(["google",var])
+        lin.append(var1)
         myarticles = articles[i]
         source.append(myarticles['author'])
         news.append(myarticles['title'])
@@ -150,7 +198,7 @@ def google():
         link.append(myarticles['url'])
         time.append(myarticles['publishedAt'])
 
-    mylist = zip(source, news, desc, cont, img, link,time)
+    mylist = zip(source, news, desc, cont, img, link,time, lin)
 
     return render_template('index.html', context=mylist)
 
@@ -160,7 +208,6 @@ def name(country,name):
     topheadlines = newsapi.get_top_headlines(country=f"{country}",category=f"{name}")
 
     articles = topheadlines['articles']
-
     desc = []
     news = []
     img = []
@@ -168,8 +215,12 @@ def name(country,name):
     link = []
     time = []
     cont = []
+    lin = []
 
     for i in range(len(articles)):
+        var = articles[i]['url'].rsplit('/', 1)[-1]
+        var1 = "/".join([f"{country}", f"{name}",var])
+        lin.append(var1)
         myarticles = articles[i]
         source.append(myarticles['author'])
         news.append(myarticles['title'])
@@ -179,9 +230,41 @@ def name(country,name):
         link.append(myarticles['url'])
         time.append(myarticles['publishedAt'])
 
-    mylist = zip(source, news, desc, cont, img, link,time)
+    mylist = zip(source, news, desc, cont, img, link,time, lin)
     print(mylist)
     return render_template('index.html', context=mylist)    
+
+@app.route('/<string:country>/<string:name>/<string:post>')
+def post(country,name,post):
+    newsapi = NewsApiClient(api_key="56f7ee8f6b4143269d9d2ac534374cbb")
+    topheadlines = newsapi.get_top_headlines(country=f"{country}",category=f"{name}")
+
+    articles = topheadlines['articles']
+    
+    desc = []
+    news = []
+    img = []
+    source = []
+    link = []
+    time = []
+    cont = []
+    lin = []
+    for i in range(len(articles)):
+        lin = articles[i]['url'].rsplit('/', 1)[-1]
+        if f"{post}" in lin:
+    
+            myarticles = articles[i]
+            source.append(myarticles['author'])
+            news.append(myarticles['title'])
+            desc.append(myarticles['description'])
+            cont.append(myarticles['content'])
+            img.append(myarticles['urlToImage'])
+            link.append(myarticles['url'])
+            time.append(myarticles['publishedAt'])
+
+    mylist = zip(source, news, desc, cont, img, link, time, lin)
+    print(mylist)
+    return render_template('blog.html', context=mylist)
 
 if __name__ == "__main__":
     app.run()

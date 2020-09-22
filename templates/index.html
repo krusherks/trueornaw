@@ -19,14 +19,14 @@
                         <div class="col-md-3 col-sm-12 col-xs-12">
                             <div class="logo">
                                 <a href="/"><img src="{{ url_for('static', filename='img/logo.jpeg')}}" width="100px" alt=""></a>
-
+                                <a href="javascript:void(0);" class="icon" style="font-size:30px;cursor:pointer;top: 0;" onclick="openNav()">
+    <i class="fa fa-bars" style="color: black;">Menu</i>
+  </a>
                                
                             </div>
 
         </div>
-        <a href="javascript:void(0);" class="icon" style="font-size:30px;cursor:pointer" onclick="openNav()">
-    <i class="fa fa-bars" style="color: black;">Menu</i>
-  </a>
+        
         <div id="mySidenav" class="sidenav">
             <h1 id="headerm" style="color: white;">TRUE | NAW</h1>
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -48,7 +48,7 @@
 
 <!-- partial:index.partial.html -->
     <div class="container">
-        {% for source,new, des, cont, i,link,time in context %}
+        {% for source,new, des, cont, i,link,time,lin in context %}
         <div class="product-card">
             <div class="product-front">
                 <div class="shadow"></div>
@@ -58,7 +58,7 @@
                 <div class="stats">         
                     <div class="stats-container">
                         <span class="product_price">{{time[0:10]}}</span>
-                        <span class="product_name"><a href="{{link}}" style="text-decoration: none;color: black;font-weight: bold;">{{new}}</a></span>    
+                        <span class="product_name"><a href="../{{lin}}" style="text-decoration: none;color: black;font-weight: bold;">{{new}}</a></span>    
                         <p>{{des}}</p>                                            
                     
                         <div class="product-options">

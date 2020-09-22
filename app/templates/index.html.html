@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+
+  <title>TRUE | NAW</title>
+
+  <link rel="canonical" href="https://rupaiya.one/ton">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='img/logo.jpeg')}}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/logo.jpeg')}}">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+ <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css'><link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+<header id="header">
+                        <div class="col-md-3 col-sm-12 col-xs-12">
+                            <div class="logo">
+                                <a href="/"><img src="{{ url_for('static', filename='img/logo.jpeg')}}" width="100px" alt=""></a>
+
+                               
+                            </div>
+
+        </div>
+        <a href="javascript:void(0);" class="icon" style="font-size:30px;cursor:pointer" onclick="openNav()">
+    <i class="fa fa-bars" style="color: black;">Menu</i>
+  </a>
+        <div id="mySidenav" class="sidenav">
+            <h1 id="headerm" style="color: white;">TRUE | NAW</h1>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="/">Home</a>
+  <a href="/in/entertainment">Entertainment</a>
+  <a href="/in/sports">Sports</a>
+  <a href="/in/politics/">Politics</a>
+  <a href="/in/health">Health</a>
+  <a href="/in/science">Science</a>
+  <a href="/us/business">US News</a>
+  <a href="/in/technology">Technology</a>
+  <a href="/techcrunch">Tech Crunch</a>
+  <a href="/wsj">WSJ</a>
+  <a href="/google">Google News</a>
+</div>
+    </header>
+<h1 id="headerm" >TRUE | NAW</h1>
+ 
+
+<!-- partial:index.partial.html -->
+    <div class="container">
+        {% for source,new, des, cont, i,link,time in context %}
+        <div class="product-card">
+            <div class="product-front">
+                <div class="shadow"></div>
+                <img src="{{i}}" width="100%" alt="" />
+                <div class="image_overlay"></div>
+                <div class="view_details">{{source}}</div>
+                <div class="stats">         
+                    <div class="stats-container">
+                        <span class="product_price"></span>
+                        <span class="product_name">{{new}}</span>    
+                        <p>{{des}}</p>                                            
+                    
+                        <div class="product-options">
+                            <span>{{cont}}
+                            </span>
+                            <div class="colors">
+                                <a href="{{link}}" style="text-decoration: none;color: black;">READ FULL ARTICLE</a>
+                            </div>
+                        </div>                       
+                    </div>                         
+                </div>
+            </div>
+                <div class="product-back">
+                    <div class="shadow"></div>
+                    <img src="{{i}}" width="100%" style="display: block;" alt="" />
+              
+                    <div class="flip-back">
+                        <div class="cy"></div>
+                        <div class="cx"></div>
+                    </div>
+                </div>    
+        </div>
+        {% endfor %}
+    </div>
+
+    <script type="text/javascript">
+        function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+    </script>
+    <script type="text/javascript">
+        function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+    </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- partial -->
+  <script  src="{{ url_for('static', filename='js/script.js')}}"></script>
+</body>
+</html>

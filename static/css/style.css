@@ -22,6 +22,7 @@ body {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
 }
+
 .container::-webkit-scrollbar {
   display: none;
 }
@@ -337,6 +338,14 @@ body {
          -o-transition:  100ms ease-out; 
             transition:  100ms ease-out;
 }
+.logo{
+  top: 0;
+  left: 0;
+}
+.logo .icon{
+  top: 0;
+  left: 0;
+}
 @media screen and (max-width: 761px){
 .sidenav {
   height: 100%; /* 100% Full-height */
@@ -346,7 +355,7 @@ body {
   top: 0; /* Stay at the top */
   right: 0;
   background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
+   /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
@@ -391,14 +400,14 @@ body {
   top: 0; /* Stay at the top */
   right: 0;
   background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
+   /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
 /* The navigation menu links */
 .sidenav a {
-  padding: 24px 8px 8px 48px;
+  padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
@@ -428,10 +437,7 @@ body {
 }
 }
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
+
 .product-card.animate{
   top:5px;
   width:98%;
