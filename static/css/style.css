@@ -22,7 +22,6 @@ body {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
 }
-
 .container::-webkit-scrollbar {
   display: none;
 }
@@ -338,14 +337,6 @@ body {
          -o-transition:  100ms ease-out; 
             transition:  100ms ease-out;
 }
-.logo{
-  top: 0;
-  left: 0;
-}
-.logo .icon{
-  top: 0;
-  left: 0;
-}
 @media screen and (max-width: 761px){
 .sidenav {
   height: 100%; /* 100% Full-height */
@@ -355,7 +346,7 @@ body {
   top: 0; /* Stay at the top */
   right: 0;
   background-color: #111; /* Black*/
-   /* Disable horizontal scroll */
+  overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
@@ -363,7 +354,7 @@ body {
 /* The navigation menu links */
 .sidenav a {
   margin-top: 20px;
-  padding: 8px 8px 8px 32px;
+  padding: 8px 8px 8px 24px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
@@ -400,7 +391,7 @@ body {
   top: 0; /* Stay at the top */
   right: 0;
   background-color: #111; /* Black*/
-   /* Disable horizontal scroll */
+  overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
