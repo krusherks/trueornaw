@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 from newsapi.newsapi_client import NewsApiClient
-
+import urllib.parse
 
 
 
@@ -53,9 +53,13 @@ def bbc():
     time = []
     cont = []
     lin = []
+    parlink = []
 
     for i in range(len(articles)):
         lin.append(articles[i]['url'].rsplit('/', 1)[-1])
+        query = "/".join(["http://trueornaw.herokuapp.com",articles[i]['url'].rsplit('/', 1)[-1]])
+        q = urllib.parse.quote(query)
+        parlink.append(q)
         myarticles = articles[i]
         source.append(myarticles['author'])
         news.append(myarticles['title'])
@@ -65,7 +69,7 @@ def bbc():
         link.append(myarticles['url'])
         time.append(myarticles['publishedAt'])
 
-    mylist = zip(source, news, desc, cont, img, link,time,lin)
+    mylist = zip(source, news, desc, cont, img, link,time,lin,parlink)
 
     return render_template('home.html', context=mylist)
 
@@ -84,11 +88,15 @@ def wsj():
     time = []
     cont = []
     lin = []
+    parlink = []
 
     for i in range(len(articles)):
         var = articles[i]['url'].rsplit('/', 1)[-1]
         var1 = "/".join([wsj,var])
         lin.append(var1)
+        query = "/".join(["http://trueornaw.herokuapp.com",var1])
+        q = urllib.parse.quote(query)
+        parlink.append(q)
         myarticles = articles[i]
         source.append(myarticles['author'])
         news.append(myarticles['title'])
@@ -98,7 +106,7 @@ def wsj():
         link.append(myarticles['url'])
         time.append(myarticles['publishedAt'])
 
-    mylist = zip(source, news, desc, cont, img, link,time,lin)
+    mylist = zip(source, news, desc, cont, img, link,time,lin,parlink)
 
     return render_template('home.html', context=mylist)
 
@@ -117,11 +125,15 @@ def tech():
     time = []
     cont = []
     lin = []
+    parlink = []
 
     for i in range(len(articles)):
         var = articles[i]['url'].rsplit('/', 1)[-1]
         var1 = "/".join(["techcrunch",var])
         lin.append(var1)
+        query = "/".join(["http://trueornaw.herokuapp.com",var1])
+        q = urllib.parse.quote(query)
+        parlink.append(q)
         myarticles = articles[i]
         source.append(myarticles['author'])
         news.append(myarticles['title'])
@@ -131,7 +143,7 @@ def tech():
         link.append(myarticles['url'])
         time.append(myarticles['publishedAt'])
 
-    mylist = zip(source, news, desc, cont, img, link, time, lin)
+    mylist = zip(source, news, desc, cont, img, link, time, lin,parlink)
 
     return render_template('home.html', context=mylist)
 
@@ -150,11 +162,15 @@ def techpost(news):
     time = []
     cont = []
     lin = []
+    parlink = []
 
     for i in range(len(articles)):
         var = articles[i]['url'].rsplit('/', 1)[-1]
         var1 = "/".join(["google",var])
         lin.append(var1)
+        query = "/".join(["http://trueornaw.herokuapp.com",var1])
+        q = urllib.parse.quote(query)
+        parlink.append(q)
         if f"{news}" in lin:
             myarticles = articles[i]
             source.append(myarticles['author'])
@@ -165,7 +181,7 @@ def techpost(news):
             link.append(myarticles['url'])
             time.append(myarticles['publishedAt'])
 
-    mylist = zip(source, news, desc, cont, img, link, time, lin)
+    mylist = zip(source, news, desc, cont, img, link, time, lin,parlink)
 
     return render_template('index.html', context=mylist)
 
@@ -184,11 +200,15 @@ def google():
     time = []
     cont = []
     lin = []
+    parlink = []
 
     for i in range(len(articles)):
         var = articles[i]['url'].rsplit('/', 1)[-1]
         var1 = "/".join(["google",var])
         lin.append(var1)
+        query = "/".join(["http://trueornaw.herokuapp.com",var1])
+        q = urllib.parse.quote(query)
+        parlink.append(q)
         myarticles = articles[i]
         source.append(myarticles['author'])
         news.append(myarticles['title'])
@@ -198,7 +218,7 @@ def google():
         link.append(myarticles['url'])
         time.append(myarticles['publishedAt'])
 
-    mylist = zip(source, news, desc, cont, img, link,time, lin)
+    mylist = zip(source, news, desc, cont, img, link,time, lin,parlink)
 
     return render_template('index.html', context=mylist)
 
@@ -216,11 +236,15 @@ def name(country,name):
     time = []
     cont = []
     lin = []
+    parlink = []
 
     for i in range(len(articles)):
         var = articles[i]['url'].rsplit('/', 1)[-1]
         var1 = "/".join([f"{country}", f"{name}",var])
         lin.append(var1)
+        query = "/".join(["http://trueornaw.herokuapp.com",var1])
+        q = urllib.parse.quote(query)
+        parlink.append(q)
         myarticles = articles[i]
         source.append(myarticles['author'])
         news.append(myarticles['title'])
@@ -230,8 +254,8 @@ def name(country,name):
         link.append(myarticles['url'])
         time.append(myarticles['publishedAt'])
 
-    mylist = zip(source, news, desc, cont, img, link,time, lin)
-    print(mylist)
+    mylist = zip(source, news, desc, cont, img, link,time, lin,parlink)
+    
     return render_template('index.html', context=mylist)    
 
 @app.route('/<string:country>/<string:name>/<string:post>')
@@ -249,8 +273,12 @@ def post(country,name,post):
     time = []
     cont = []
     lin = []
+    parlink = []
     for i in range(len(articles)):
         lin = articles[i]['url'].rsplit('/', 1)[-1]
+        query = "/".join(["http://trueornaw.herokuapp.com",var1])
+        q = urllib.parse.quote(query)
+        parlink.append(q)
         if f"{post}" in lin:
     
             myarticles = articles[i]
@@ -262,8 +290,7 @@ def post(country,name,post):
             link.append(myarticles['url'])
             time.append(myarticles['publishedAt'])
 
-    mylist = zip(source, news, desc, cont, img, link, time, lin)
-    print(mylist)
+    mylist = zip(source, news, desc, cont, img, link, time, lin,parlink)
     return render_template('blog.html', context=mylist)
 
 if __name__ == "__main__":
