@@ -44,7 +44,6 @@ def bbc():
     topheadlines = newsapi.get_top_headlines(country="in")
 
     articles = topheadlines['articles']
-
     desc = []
     news = []
     img = []
@@ -116,7 +115,6 @@ def tech():
     topheadlines = newsapi.get_top_headlines(sources="techcrunch")
 
     articles = topheadlines['articles']
-
     desc = []
     news = []
     img = []
@@ -153,7 +151,6 @@ def techpost(news):
     topheadlines = newsapi.get_top_headlines(sources="google-news-in")
 
     articles = topheadlines['articles']
-
     desc = []
     news = []
     img = []
@@ -191,7 +188,6 @@ def google():
     topheadlines = newsapi.get_top_headlines(sources="google-news-in")
 
     articles = topheadlines['articles']
-
     desc = []
     news = []
     img = []
@@ -261,10 +257,9 @@ def name(country,name):
 @app.route('/<string:country>/<string:name>/<string:post>')
 def post(country,name,post):
     newsapi = NewsApiClient(api_key="56f7ee8f6b4143269d9d2ac534374cbb")
-    topheadlines = newsapi.get_top_headlines(country=f"{country}",category=f"{name}")
+    topheadlines = newsapi.get_everything(country=f"{country}",category=f"{name}")
 
     articles = topheadlines['articles']
-    
     desc = []
     news = []
     img = []
