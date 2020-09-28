@@ -10,7 +10,19 @@ body {
   height: 100vh;
   overflow: hidden;
 }
+::-webkit-scrollbar {
+  width: 2px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #48daa1; 
+}
 .container {
   max-width: 1335px;
   text-decoration: none;
