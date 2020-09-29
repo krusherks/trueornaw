@@ -8,6 +8,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   height: 100vh;
+  margin: 0 auto;
   overflow: hidden;
 }
 ::-webkit-scrollbar {
@@ -26,7 +27,7 @@ body {
 .container {
   max-width: 1335px;
   text-decoration: none;
-  height: 80vh;
+  height: 60vh;
   justify-content: center;
   text-align: left;
   margin: 0 auto;
@@ -335,12 +336,12 @@ body {
   text-align: left;
   position:relative; 
   border-radius: 5px; 
-  top: 10px;
+  top: 10%;
   width:100%;
   max-width: 600px;
-  height: 98%; 
+  height: 80%; 
   border-radius: 5px;
-  padding-top: 40px;
+  margin-top: 40px;
   padding-bottom: 40px; 
   overflow:hidden;
   scroll-snap-align: center;
@@ -351,33 +352,30 @@ body {
             transition:  100ms ease-out;
 }
 @media screen and (max-width: 761px){
-.sidenav {
-  height: 100%; /* 100% Full-height */
+.sidenav { /* 100% Full-height */
   width: 0px; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   right: 0;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
+  background-color: #000; /* Black*/
+  padding-top: 60px;
+  overflow-x: hidden; /* Disable horizontal scroll *//* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
 /* The navigation menu links */
 .sidenav a {
-  margin-top: 20px;
-  padding: 8px 8px 8px 24px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: #fff;
   display: block;
   transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-  color: #f1f1f1;
+  background-color: #48daa1;
 }
 
 /* Position and style the close button (top right corner) */
@@ -388,33 +386,32 @@ body {
   font-size: 36px;
   margin-left: 50px;
 }
-.sidenav1 {
-  height: 100%; /* 100% Full-height */
+.sidenav1 { /* 100% Full-height */
   width: 0px; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   right: 0;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
+  height: 100%;
+  padding-top: 80px;
+  background-color: #000; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll *//* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
 /* The navigation menu links */
 .sidenav1 a {
-  margin-top: 20px;
-  padding: 8px 8px 8px 24px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  padding: 8px 8px 8px 32px;
+  color: #fff;
   display: block;
   transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav1 a:hover {
-  color: #f1f1f1;
+  background-color: #48daa1;
 }
 
 /* Position and style the close button (top right corner) */
@@ -424,6 +421,31 @@ body {
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+}
+.icon-bar {
+  width: 100%; /* Full-width */
+  background-color: #000; /* Dark-grey background */
+  overflow: auto; /* Overflow due to float */
+  bottom: 0;
+  position: absolute;
+}
+
+.icon-bar a {
+  float: left; /* Float links side by side */
+  text-align: center; /* Center-align text */
+  width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+  padding: 12px 0; /* Some top and bottom padding */
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  color: white; /* White text color */
+  font-size: 14px; /* Increased font size */
+}
+
+.icon-bar a:hover {
+  background-color: #48daa1; /* Add a hover color */
+}
+
+.active {
+  background-color: #48daa1; /* Add an active/current color */
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
@@ -477,25 +499,28 @@ body {
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   right: 0;
-  background-color: #111; /* Black*/
+  background-color: #000;
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
+  padding-top: 80px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
-
+.icon-bar {
+display: none;
+}
 /* The navigation menu links */
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: #fff;
   display: block;
+  text-align: right;
   transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-  color: #f1f1f1;
+  background: #48daa1;
 }
 
 /* Position and style the close button (top right corner) */
@@ -515,7 +540,7 @@ body {
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   right: 0;
-  background-color: #111; /* Black*/
+  background-color: #000; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -527,14 +552,13 @@ body {
   padding: 8px 8px 8px 24px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
-  display: block;
+  color: #fff;
   transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav1 a:hover {
-  color: #f1f1f1;
+  background-color: #48daa1;
 }
 
 /* Position and style the close button (top right corner) */
@@ -606,7 +630,6 @@ body {
   border-radius: 5px;
   top: -30px;
   height: 120%;
-  overflow: hidden;
   left:0;
   width:89.2%;
   padding:27px 35px 35px; 
