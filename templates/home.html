@@ -46,7 +46,12 @@
     <a href="/google">Google News</a>
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   </div>
-  <div class="icon-bar">
+</header>
+ 
+
+<!-- partial:index.partial.html -->
+    <div class="container">
+      <div class="icon-bar">
   <a href="/"><i class="fa fa-home"></i></a>
   <a href="/in/entertainment"><i class="fa fa-film"></i></a>
   <a href="/in/sports"><i class="fa fa-trophy"></i></a>
@@ -55,11 +60,6 @@
       <i class="fa fa-bars"></i>
     </a>
 </div>
-</header>
- 
-
-<!-- partial:index.partial.html -->
-    <div class="container">
         {% for source,new, des, cont, i,link,time,lin,parlink in context %}
         <div class="product-card">
             <div class="product-front">
