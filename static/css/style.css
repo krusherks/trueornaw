@@ -29,7 +29,7 @@ body {
   position: absolute;
   max-width: 1396px;
   width: 100%;
-  height: 70vh;
+  height: 100%;
   margin-top: 20px;
   top: 60%;
   padding-bottom: 20px;
@@ -446,7 +446,7 @@ body {
   overflow: auto; /* Overflow due to float */
   top: 0;
   z-index: 1;
-  position: absolute;
+  position: fixed;
   overflow-x: hidden;
 }
 
