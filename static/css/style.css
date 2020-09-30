@@ -28,7 +28,7 @@ body {
   text-decoration: none;
   position: absolute;
   width: 100vh;
-  height: 88vh;
+  height: 70vh;
   margin-top: 20px;
   top: 50%;
   padding-bottom: 20px;
@@ -345,7 +345,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  width:100%;
+  width:98%;
   max-width: 600px;
   height: 98%; 
   border-radius: 5px;
@@ -652,7 +652,7 @@ display: none;
   margin-bottom: 20px;
   padding-bottom: 20px;
   width:89.2%;
-  padding:27px 35px 35px; 
+  padding:27px 35px 35px 35px; 
   -webkit-transition: all 200ms ease-out; 
        -moz-transition: all 200ms ease-out; 
          -o-transition: all 200ms ease-out; 
