@@ -12,18 +12,9 @@ body {
   overflow-x: hidden;
 }
 ::-webkit-scrollbar {
-  width: 2px;
+  display: none;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #48daa1; 
-}
 .container {
   text-decoration: none;
   position: absolute;
@@ -399,7 +390,7 @@ body {
 }
 .sidenav1 { /* 100% Full-height */
   width: 0px; /* 0 width - change this with JavaScript */
-  position: absolute; /* Stay in place */
+  position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   right: 0;
@@ -423,7 +414,6 @@ body {
   display: block;
   text-align: right;
   transition: 0.3s;
-  background-color: #000;
 }
 
 /* When you mouse over the navigation links, change their color */
