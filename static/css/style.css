@@ -9,7 +9,6 @@ body {
   line-height: 1.6;
   height: 100vh;
   margin: 0 auto;
-  overflow: hidden;
 }
 ::-webkit-scrollbar {
   width: 2px;
@@ -27,7 +26,7 @@ body {
 .container {
   text-decoration: none;
   position: absolute;
-  width: 100vh;
+  width: 100%;
   height: 70vh;
   margin-top: 20px;
   top: 50%;
