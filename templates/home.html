@@ -23,7 +23,6 @@
         
   <div id="mySidenav" class="sidenav">
     <h1 id="headerm" style="color: white;">TRUE | NAW</h1>
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="/">Home</a>
     <a href="/in/entertainment">Entertainment</a>
     <a href="/in/sports">Sports</a>
@@ -37,12 +36,7 @@
     <a href="/google">Google News</a>
   </div>
   <div id="mySidenav1" class="sidenav1">
-    <h1 id="headerm" style="color: white;">TRUE | NAW</h1>
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="/">Home</a>
-    <a href="/in/entertainment">Entertainment</a>
-    <a href="/in/sports">Sports</a>
-    <a href="/in/business">Business</a>
+    <img src="{{ url_for('static', filename='img/logo.jpeg')}}" width="80px" style="left: 10px;top:60px;position: fixed;" alt="">
     <a href="/in/health">Health</a>
     <a href="/in/science">Science</a>
     <a href="/us/business">US News</a>
@@ -50,18 +44,18 @@
     <a href="/techcrunch">Tech Crunch</a>
     <a href="/wsj">WSJ</a>
     <a href="/google">Google News</a>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   </div>
   <div class="icon-bar">
-  <a class="active" href="#"><i class="fa fa-home"></i></a>
-  <a href="#"><i class="fa fa-envelope"></i></a>
-  <a href="#"><i class="fa fa-globe"></i></a>
-  <a href="#"><i class="fa fa-trash"></i></a>
+  <a href="/"><i class="fa fa-home"></i></a>
+  <a href="/in/entertainment"><i class="fa fa-film"></i></a>
+  <a href="/in/sports"><i class="fa fa-trophy"></i></a>
+  <a href="/in/business"><i class="fa fa-briefcase"></i></a>
   <a href="javascript:void(0);" class="icon" onclick="openNav()">
       <i class="fa fa-bars"></i>
     </a>
 </div>
 </header>
-<h1 id="headerm" >TRUE | NAW </h1>
  
 
 <!-- partial:index.partial.html -->
@@ -122,7 +116,7 @@
 
     <script type="text/javascript">
         function openNav() {
-  document.getElementById("mySidenav1").style.width = "250px";
+  document.getElementById("mySidenav1").style.width = "100vh";
 }
     </script>
     <script type="text/javascript">

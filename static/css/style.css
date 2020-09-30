@@ -2,7 +2,7 @@
 
 body {
   color: #000;
-  background: #fff;
+  background: #fafafa;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -25,19 +25,25 @@ body {
   background: #48daa1; 
 }
 .container {
-  max-width: 1335px;
   text-decoration: none;
-  height: 97vh;
+  position: absolute;
+  width: 100vh;
+  height: 88vh;
+  margin-top: 20px;
+  top: 50%;
+  padding-bottom: 20px;
+  padding-left: 5px;
+  margin-bottom: 20px;
   justify-content: center;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding-top: 20px;
+  margin-top: 15px;
   text-align: left;
-  margin: 0 auto;
   overflow-y: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   -webkit-overflow-scrolling:touch;
-}
-.container::-webkit-scrollbar {
-  display: none;
 }
 .grid-row {
   display: flex;
@@ -336,13 +342,15 @@ body {
   text-align: left;
   position:relative; 
   border-radius: 5px; 
-  top: 10%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   width:100%;
   max-width: 600px;
-  height: 80%; 
+  height: 98%; 
   border-radius: 5px;
-  margin-top: 40px;
-  padding-bottom: 40px; 
+  padding-bottom: 40px;
+  margin-bottom: 40px;
   overflow:hidden;
   scroll-snap-align: center;
     transform-style: preserve-3d;
@@ -363,7 +371,9 @@ body {
   overflow-x: hidden; /* Disable horizontal scroll *//* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
-
+.container{
+  padding-top: 20px;
+}
 /* The navigation menu links */
 .sidenav a {
   text-decoration: none;
@@ -388,45 +398,50 @@ body {
 }
 .sidenav1 { /* 100% Full-height */
   width: 0px; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
+  position: absolute; /* Stay in place */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   right: 0;
   height: 100%;
-  padding-top: 80px;
-  background-color: #000; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll *//* Place content 60px from the top */
+  padding-top: 140px;
+  background-color: #000; /* Black*/ /* Disable horizontal scroll *//* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+.logo{
+  display: none;
 }
 
 /* The navigation menu links */
 .sidenav1 a {
   text-decoration: none;
   font-size: 25px;
-  padding: 8px 8px 8px 32px;
+  padding: 8px 8px 8px 8px;
   color: #fff;
+  position: relative;
   display: block;
+  text-align: right;
   transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav1 a:hover {
   background-color: #48daa1;
+  color: #000;
 }
 
 /* Position and style the close button (top right corner) */
 .sidenav1 .closebtn {
-  position: absolute;
+  position: relative;
   top: 0;
+  padding: 8px 8px 8px 8px;
   right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+  font-size: 25px;
 }
 .icon-bar {
   width: 100%; /* Full-width */
   background-color: #000; /* Dark-grey background */
   overflow: auto; /* Overflow due to float */
-  bottom: 0;
+  top: 0;
   position: absolute;
 }
 
@@ -437,7 +452,7 @@ body {
   padding: 12px 0; /* Some top and bottom padding */
   transition: all 0.3s ease; /* Add transition for hover effects */
   color: white; /* White text color */
-  font-size: 14px; /* Increased font size */
+  font-size: 18px; /* Increased font size */
 }
 
 .icon-bar a:hover {
@@ -517,10 +532,13 @@ display: none;
   text-align: right;
   transition: 0.3s;
 }
-
+.container{
+  padding-right: 250px;
+}
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
   background: #48daa1;
+  color: #000;
 }
 
 /* Position and style the close button (top right corner) */
@@ -615,7 +633,6 @@ display: none;
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 
 .product-card.animate{
-  top:5px;
   width:98%;
   height:98%;
   box-shadow:0px 13px 21px -5px rgba(0, 0, 0, 0.3);
@@ -629,8 +646,11 @@ display: none;
   position:relative;
   border-radius: 5px;
   top: -30px;
-  height: 120%;
+  height: 100%;
+  overflow: hidden;
   left:0;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
   width:89.2%;
   padding:27px 35px 35px; 
   -webkit-transition: all 200ms ease-out; 
@@ -956,8 +976,8 @@ div.shadow{
     transform-style: preserve-3d;
     transition: transform 5s;
     position:absolute;    
-    top:0%;
-    right:15px; 
+    top:10px;
+    right:35px; 
     margin-left:-167px;
     padding-bottom: 20px;
 }
