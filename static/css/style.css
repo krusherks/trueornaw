@@ -9,6 +9,7 @@ body {
   line-height: 1.6;
   height: 100vh;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 ::-webkit-scrollbar {
   width: 2px;
@@ -25,9 +26,9 @@ body {
 }
 .container {
   text-decoration: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
-  height: 70vh;
+  height: 80%;
   margin-top: 20px;
   top: 50%;
   padding-bottom: 20px;
@@ -39,6 +40,7 @@ body {
   padding-top: 20px;
   margin-top: 15px;
   text-align: left;
+  overflow-x: hidden;
   overflow-y: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
