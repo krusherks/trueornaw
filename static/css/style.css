@@ -653,13 +653,7 @@ display: none;
          -o-transition: all 200ms ease-out; 
             transition: all 200ms ease-out;
 }
-.product-card.animate .stats-container{
-  top:-100px;
-  -webkit-transition: all 200ms ease-out; 
-       -moz-transition: all 200ms ease-out; 
-         -o-transition: all 200ms ease-out; 
-            transition: all 200ms ease-out; 
-}
+
 .carousel{
   top: 0;
 
