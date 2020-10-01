@@ -395,7 +395,7 @@ body {
   top: 0; /* Stay at the top */
   right: 0;
   height: 100%;
-  padding-top: 140px;
+  padding-top: 80px;
   overflow-x: hidden;
   background-color: #000; /* Black*/ /* Disable horizontal scroll *//* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
