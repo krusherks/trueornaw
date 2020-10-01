@@ -36,7 +36,9 @@ def Index():
 
     return render_template('bbc1.html', context = mylist)
 
-
+@app.route('/sw.js', methods=['GET'])
+def sw():
+    return app.send_static_file('sw.js')
 
 @app.route('/')
 def bbc():
