@@ -1,13 +1,7 @@
 $(document).ready(function(){
 	
 	// Lift card and show stats on Mouseover
-	$('div.product-card').hover(function(){
-			$(this).addClass('animate');
-			$('div.carouselNext, div.carouselPrev').addClass('visible');			
-		 }, function(){
-			$(this).removeClass('animate');			
-			$('div.carouselNext, div.carouselPrev').removeClass('visible');
-	});	
+
 	
 	// Flip card to the back side
 	$('div.view_details').click(function(){		

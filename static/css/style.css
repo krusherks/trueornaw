@@ -20,13 +20,11 @@ body {
   position: absolute;
   max-width: 1396px;
   width: 100%;
+  padding-top: 10px;
   height: 100%;
-  margin-top: 20px;
-  top: 60%;
-  padding-bottom: 20px;
-  padding-left: 5px;
-  margin-bottom: 20px;
+  top: 50%;
   justify-content: center;
+  background-color: #fafafa;
   left: 50%;
   transform: translate(-50%,-50%);
   text-align: left;
@@ -297,9 +295,8 @@ body {
   }
 }
 .product-front, .product-back{
-  background:#fff;
+  background:#fafafa;
   position:relative;
-  border-radius: 5px;
   -webkit-transition: all 100ms ease-out; 
        -moz-transition: all 100ms ease-out; 
          -o-transition: all 100ms ease-out; 
@@ -332,17 +329,16 @@ body {
   justify-content: center;
   text-align: left;
   position:relative; 
-  border-radius: 5px; 
+  background-color: #fafafa;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  width:98%;
-  max-width: 600px;
-  height: 98%; 
+  width:100%;
+  max-width: 700px;
+  height: 100%; 
   min-height: 500px;
-  border-radius: 5px;
-  padding-bottom: 40px;
-  margin-bottom: 40px;
+  max-height: 800px;
+  min-width: 300px;
   overflow:hidden;
   scroll-snap-align: center;
     transform-style: preserve-3d;
@@ -362,9 +358,6 @@ body {
   padding-top: 60px;
   overflow-x: hidden; /* Disable horizontal scroll *//* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-.container{
-  padding-top: 20px;
 }
 /* The navigation menu links */
 .sidenav a {
@@ -412,24 +405,18 @@ body {
   color: #fff;
   position: relative;
   display: block;
-  text-align: right;
+  text-align: center;
+  transform: translate(0%,50%);
   transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav1 a:hover {
-  background-color: #48daa1;
-  color: #000;
+  color: #48daa1;
 }
 
 /* Position and style the close button (top right corner) */
-.sidenav1 .closebtn {
-  position: relative;
-  top: 0;
-  padding: 8px 8px 8px 8px;
-  right: 25px;
-  font-size: 25px;
-}
+
 .icon-bar {
   width: 100%; /* Full-width */
   background-color: #000; /* Dark-grey background */
@@ -451,11 +438,11 @@ body {
 }
 
 .icon-bar a:hover {
-  background-color: #48daa1; /* Add a hover color */
+  color: #48daa1; /* Add a hover color */
 }
 
 .active {
-  background-color: #48daa1; /* Add an active/current color */
+  color: #48daa1; /* Add an active/current color */
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
@@ -532,8 +519,7 @@ display: none;
 }
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-  background: #48daa1;
-  color: #000;
+  color: #48daa1;
 }
 
 /* Position and style the close button (top right corner) */
@@ -637,15 +623,12 @@ display: none;
             transition:  100ms ease-out; 
 }
 .stats-container{
-  background:#fff;  
+  background:#fafafa;  
   position:relative;
-  border-radius: 5px;
   top: -30px;
   height: 100%;
   overflow: hidden;
   left:0;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
   width:89.2%;
   padding:27px 35px 35px 35px; 
   -webkit-transition: all 200ms ease-out; 
@@ -809,7 +792,9 @@ a{
   font-weight: bold;
   cursor:pointer;
 }
-
+.sharing{
+  bottom: 0;
+}
 .product-options strong{
   font-weight:700;
   color:#393c45;
@@ -961,14 +946,13 @@ div.shadow{
 #headerm{
   position: relative;
     perspective: 800px;
-    color: black;
+    color: #48cfad;
     transform-style: preserve-3d;
     transition: transform 5s;
-    position:absolute;    
-    top:10px;
-    right:35px; 
-    margin-left:-167px;
-    padding-bottom: 20px;
+    position:absolute; 
+    top: 14px;
+    right: 8px;
+    padding-bottom: 40px;
 }
 .resp-sharing-button__link,
 .resp-sharing-button__icon {
