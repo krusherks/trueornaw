@@ -299,6 +299,7 @@ body {
   background:#fafafa;
   position:relative;
   border-radius: 5px;
+  padding-bottom: 10px;
   -webkit-transition: all 100ms ease-out; 
        -moz-transition: all 100ms ease-out; 
          -o-transition: all 100ms ease-out; 
