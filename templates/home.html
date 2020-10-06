@@ -47,7 +47,7 @@
     <a href="/google">Google News</a>
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Close</a>
   </div>
-  <div class="icon-bar">
+  <div class="icon-bar" id="myNAV">
   <a href="/"><i class="fa fa-home"></i></a>
   <a href="/in/entertainment"><i class="fa fa-film"></i></a>
   <a href="/in/sports"><i class="fa fa-trophy"></i></a>
@@ -60,17 +60,16 @@
  
 
 <!-- partial:index.partial.html -->
-    <div class="container">
+    <div class="container" onclick="myFunction()">
 
         {% for source,new, des, cont, i,link,time,lin,parlink in context %}
         <div class="product-card">
             <div class="product-front">
                 <div class="shadow"></div>
-                <img src="{{i}}" width="100%" alt="" />
+                <img src="{{i}}"  height="430px" style="min-width: 100%;" alt="" />
                 <div class="stats">         
                     <div class="stats-container">
-                        <span class="product_price">{{time[0:10]}}</span>
-                        <span class="product_name"><a href="{{link}}" style="text-decoration: none;color: black;font-weight: bold;">{{new}}</a></span>    
+                        <span class="product_name"><a href="{{link}}" style="text-decoration: none;">{{new}}</a></span>    
                         <p>{{des}}</p>                                            
                     
                         <div class="product-options">
@@ -115,6 +114,16 @@
   document.getElementById("mySidenav1").style.width = "0%";
 }
     </script>
+    <script>
+function myFunction() {
+  var x = document.getElementById("myNAV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
     <script type="text/javascript">
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function() {

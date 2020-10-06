@@ -8,6 +8,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   height: 100vh;
+  border-radius: 5px;
   margin: 0 auto;
   overflow-x: hidden;
 }
@@ -20,7 +21,7 @@ body {
   position: absolute;
   max-width: 1396px;
   width: 100%;
-  padding-top: 10px;
+  border-radius: 5px;
   height: 100%;
   top: 50%;
   justify-content: center;
@@ -297,6 +298,7 @@ body {
 .product-front, .product-back{
   background:#fafafa;
   position:relative;
+  border-radius: 5px;
   -webkit-transition: all 100ms ease-out; 
        -moz-transition: all 100ms ease-out; 
          -o-transition: all 100ms ease-out; 
@@ -329,12 +331,13 @@ body {
   justify-content: center;
   text-align: left;
   position:relative; 
+  border-radius: 5px;
   background-color: #fafafa;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   width:100%;
-  max-width: 700px;
+  max-width: 650px;
   height: 100%; 
   min-height: 500px;
   max-height: 800px;
@@ -355,7 +358,7 @@ body {
   top: 0; /* Stay at the top */
   right: 0;
   background-color: #000; /* Black*/
-  padding-top: 60px;
+  padding-top: 40px;
   overflow-x: hidden; /* Disable horizontal scroll *//* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
@@ -388,7 +391,7 @@ body {
   top: 0; /* Stay at the top */
   right: 0;
   height: 100%;
-  padding-top: 80px;
+  padding-top: 60px;
   overflow-x: hidden;
   background-color: #000; /* Black*/ /* Disable horizontal scroll *//* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -401,12 +404,15 @@ body {
 .sidenav1 a {
   text-decoration: none;
   font-size: 25px;
-  padding: 8px 8px 8px 8px;
+  font-weight: 600;
+  padding: 8px 8px 8px 32px;
   color: #fff;
   position: relative;
+  top: 0%;
+  left: 50%;
   display: block;
   text-align: center;
-  transform: translate(0%,50%);
+  transform: translate(-50%,-50%);
   transition: 0.3s;
 }
 
@@ -434,7 +440,7 @@ body {
   padding: 12px 0; /* Some top and bottom padding */
   transition: all 0.3s ease; /* Add transition for hover effects */
   color: white; /* White text color */
-  font-size: 18px; /* Increased font size */
+  font-size: 22px; /* Increased font size */
 }
 
 .icon-bar a:hover {
@@ -498,7 +504,7 @@ body {
   right: 0;
   background-color: #000;
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 80px; /* Place content 60px from the top */
+  padding-top: 32px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 .icon-bar {
@@ -625,12 +631,12 @@ display: none;
 .stats-container{
   background:#fafafa;  
   position:relative;
-  top: -30px;
+  top: -60px;
   height: 100%;
   overflow: hidden;
   left:0;
-  width:89.2%;
-  padding:27px 35px 35px 35px; 
+  width:97%;
+  padding:12px 12px 12px 12px; 
   -webkit-transition: all 200ms ease-out; 
        -moz-transition: all 200ms ease-out; 
          -o-transition: all 200ms ease-out; 
@@ -739,7 +745,7 @@ div.product-card.flip180{
   font-size:22px;
   color:#393c45;  
 }
-.product_name:hover{
+.stats-container .product_name:hover{
   font-size:22px;
   color:#48cfad;  
 }
@@ -946,13 +952,12 @@ div.shadow{
 #headerm{
   position: relative;
     perspective: 800px;
-    color: #48cfad;
+    color: white;
     transform-style: preserve-3d;
     transition: transform 5s;
     position:absolute; 
-    top: 14px;
+    bottom: 7px;
     right: 8px;
-    padding-bottom: 40px;
 }
 .resp-sharing-button__link,
 .resp-sharing-button__icon {
