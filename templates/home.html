@@ -136,6 +136,12 @@ function myFunction() {
             });
         }
     </script>
+    <script type="text/javascript">
+      import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+
+const el = document.createElement('pwa-update');
+document.body.appendChild(el);
+    </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <!-- partial -->
   <script  src="{{ url_for('static', filename='js/script.js')}}"></script>
