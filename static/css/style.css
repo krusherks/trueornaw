@@ -631,8 +631,8 @@ display: none;
 .stats-container{
   background:#fafafa;  
   position:relative;
-  top: -60px;
-  height: 100%;
+  top: 0;
+  height: 40vh;
   overflow: hidden;
   left:0;
   width:97%;
