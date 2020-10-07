@@ -952,7 +952,7 @@ div.shadow{
     transform-style: preserve-3d;
     transition: transform 5s;
     position:absolute; 
-    bottom: 12px;
+    bottom: 10%;
     right: 8px;
 }
 .resp-sharing-button__link,
