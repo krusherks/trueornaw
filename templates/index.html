@@ -59,15 +59,7 @@
  
 
 <!-- partial:index.partial.html -->
-    <div class="container" id="bo" onclick="myFunction()">
-      <div data-role="panel" id="left-panel" data-theme="b">
-        <p>Left reveal panel.</p>
-        <a href="#" data-rel="close" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right">Close</a>
-    </div><!-- /panel -->
-    <div data-role="panel" id="right-panel" data-display="push" data-position="right" data-theme="c">
-        <p>Right push panel.</p>
-        <a href="#" data-rel="close" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right">Close</a>
-    </div>
+    <div class="container"  onclick="myFunction()">
         {% for source,new, des, cont, i,link,time,lin,parlink in context %}
         <div class="product-card">
             <div class="product-front" style="top: 0;left: 0;position: fixed;height:40vh;">
