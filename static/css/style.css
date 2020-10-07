@@ -10,7 +10,6 @@ body {
   height: 100vh;
   margin: 0 auto;
   overflow-x: hidden;
-  transition: top 0.3s;
 }
 ::-webkit-scrollbar {
   display: none;
@@ -33,7 +32,6 @@ body {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   -webkit-overflow-scrolling:touch;
-  transition: top 0.3s;
 }
 .grid-row {
   display: flex;
@@ -300,7 +298,6 @@ body {
   position:relative;
   border-radius: 5px;
   height: 100%;
-  transition: top 0.3s;
   -webkit-transition: all 100ms ease-out; 
        -moz-transition: all 100ms ease-out; 
          -o-transition: all 100ms ease-out; 
@@ -344,8 +341,8 @@ body {
   min-height: 500px;
   max-height: 900px;
   min-width: 300px;
-  overflow:hidden;
-  transition: top 0.3s;
+  padding-top: 20px;
+  padding-bottom: 20px;
   scroll-snap-align: center;
     transform-style: preserve-3d;
   -webkit-transition:  100ms ease-out; 
@@ -392,7 +389,7 @@ body {
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
-  right: 0;
+  right: -50%;
   height: 100%;
   padding-top: 60px;
   overflow-x: hidden;
@@ -412,7 +409,7 @@ body {
   color: #242322;
   position: relative;
   display: block;
-  text-align: center;
+  text-align: left;
   transition: 0.3s;
 }
 
@@ -635,8 +632,7 @@ display: none;
   background:#fafafa;  
   position:relative;
   top: 0;
-  height: 40vh;
-  overflow: hidden;
+  height: 60vh;
   left:0;
   width:97%;
   padding:12px 12px 12px 12px; 
@@ -953,14 +949,13 @@ div.shadow{
       transition: all 100ms ease-out;
 }
 #headerm{
-  position: relative;
     perspective: 800px;
     color: #242322;
     transform-style: preserve-3d;
     transition: transform 5s;
-    position:absolute; 
-    bottom: 10%;
-    right: 8px;
+    position:relative; 
+    bottom: 20px;
+    right: -8px;
 }
 .resp-sharing-button__link,
 .resp-sharing-button__icon {
