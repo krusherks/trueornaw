@@ -1,7 +1,18 @@
 $(document).ready(function(){
 	
 	// Lift card and show stats on Mouseover
-
+	$( document ).on( "swipeleft swiperight", "#bo", function( e ) {
+        // We check if there is no open panel on the page because otherwise
+        // a swipe to close the left panel would also open the right panel (and v.v.).
+        // We do this by checking the data that the framework stores on the page element (panel: open).
+        if ( $.mobile.activePage.jqmData( "panel" ) !== "open" ) {
+            if ( e.type === "swipeleft"  ) {
+                $( "#right-panel" ).panel( "open" );
+            } else if ( e.type === "swiperight" ) {
+                $( "#left-panel" ).panel( "open" );
+            }
+        }
+    });
 	
 	// Flip card to the back side
 	$('div.view_details').click(function(){		
@@ -92,3 +103,4 @@ $(document).ready(function(){
 		setTimeout(function(){isAnimating = false;}, 300);			
 	});
 });
+

@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/logo.jpeg')}}">
     <script data-ad-client="ca-pub-4663002178150714" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
-<body>
+<body id=body>
 <!-- partial:index.partial.html -->
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css'><link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
@@ -60,8 +60,15 @@
  
 
 <!-- partial:index.partial.html -->
-    <div class="container" onclick="myFunction()">
-
+    <div class="container" id="bo" onclick="myFunction()">
+      <div data-role="panel" id="left-panel" data-theme="b">
+        <p>Left reveal panel.</p>
+        <a href="#" data-rel="close" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right">Close</a>
+    </div><!-- /panel -->
+    <div data-role="panel" id="right-panel" data-display="push" data-position="right" data-theme="c">
+        <p>Right push panel.</p>
+        <a href="#" data-rel="close" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="right">Close</a>
+    </div>
         {% for source,new, des, cont, i,link,time,lin,parlink in context %}
         <div class="product-card">
             <div class="product-front" style="top: 0;left: 0;position: fixed;height:40vh;">
