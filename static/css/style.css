@@ -2,7 +2,7 @@
 
 body {
   color: #000;
-  background: #fafafa;
+  background: #242322;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -948,7 +948,7 @@ div.shadow{
 #headerm{
   position: relative;
     perspective: 800px;
-    color: white;
+    color: #242322;
     transform-style: preserve-3d;
     transition: transform 5s;
     position:absolute; 
