@@ -418,6 +418,7 @@ body {
 /* When you mouse over the navigation links, change their color */
 .sidenav1 a:hover {
   color: #48daa1;
+  background-color: #f1f1f1;
 }
 
 /* Position and style the close button (top right corner) */
@@ -447,10 +448,12 @@ body {
 
 .icon-bar a:hover {
   color: #48daa1; /* Add a hover color */
+  background-color: #f1f1f1;
 }
 
 .active {
   color: #48daa1; /* Add an active/current color */
+  background-color: #f1f1f1;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
@@ -529,6 +532,7 @@ display: none;
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
   color: #48daa1;
+  background-color: #f1f1f1;
 }
 
 /* Position and style the close button (top right corner) */
@@ -639,7 +643,7 @@ display: none;
   height: 30%;
   left:0;
   width:97%;
-  padding:12px 12px 12px 12px; 
+  padding:12px 0px 12px 12px; 
   -webkit-transition: all 200ms ease-out; 
        -moz-transition: all 200ms ease-out; 
          -o-transition: all 200ms ease-out; 
