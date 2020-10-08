@@ -64,11 +64,11 @@
     <div class="container" onclick="myFunction()">
         {% for source,new, des, cont, i,link,time,lin,parlink in context %}
         <div class="product-card">
-            <div class="product-front" style="top: 0;left: 0;position: fixed;height:60vh;">
+            <div class="product-front" style="top: 0;left: 0;position: fixed;height:100%;">
                 <div class="shadow"></div>
-                <img src="{{i}}" width="100%"alt="" />
-                <div class="stats">         
-                    <div class="stats-container">
+                <img src="{{i}}" style="top: 0;left: 0;position: fixed;height:60%;" alt="" />
+                <div class="stats" style="top: 60%;left: 0;height:40%;position: fixed;">         
+                    <div class="stats-container" height="100%">
                         <span class="product_name"><a href="{{link}}" style="text-decoration: none;">{{new}}</a></span>    
                         <p>{{des}}</p>                                            
                     
