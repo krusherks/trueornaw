@@ -642,11 +642,11 @@ display: none;
 .stats-container{
   background:#fafafa;  
   position:fixed;
-  top: 70%;
-  height: 30%;
+  top: 60%;
+  height: 100%;
   left:0;
   width:97%;
-  padding:12px 0px 12px 12px; 
+  padding:12px 12px 12px 12px; 
   -webkit-transition: all 200ms ease-out; 
        -moz-transition: all 200ms ease-out; 
          -o-transition: all 200ms ease-out; 
