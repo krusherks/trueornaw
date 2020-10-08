@@ -58,7 +58,7 @@ def bbc():
 
     for i in range(len(articles)):
         lin.append(articles[i]['url'].rsplit('/', 1)[-1])
-        query = "/".join(["http://trueornaw.herokuapp.com",articles[i]['url'].rsplit('/', 1)[-1]])
+        query = "/".join(["https://trueornaw.herokuapp.com",articles[i]['url'].rsplit('/', 1)[-1]])
         q = urllib.parse.quote(query)
         parlink.append(q)
         myarticles = articles[i]
@@ -95,7 +95,7 @@ def wsj():
         var = articles[i]['url'].rsplit('/', 1)[-1]
         var1 = "/".join([wsj,var])
         lin.append(var1)
-        query = "/".join(["http://trueornaw.herokuapp.com",var1])
+        query = "/".join(["https://trueornaw.herokuapp.com",var1])
         q = urllib.parse.quote(query)
         parlink.append(q)
         myarticles = articles[i]
@@ -131,7 +131,7 @@ def tech():
         var = articles[i]['url'].rsplit('/', 1)[-1]
         var1 = "/".join(["techcrunch",var])
         lin.append(var1)
-        query = "/".join(["http://trueornaw.herokuapp.com",var1])
+        query = "/".join(["https://trueornaw.herokuapp.com",var1])
         q = urllib.parse.quote(query)
         parlink.append(q)
         myarticles = articles[i]
@@ -167,7 +167,7 @@ def techpost(news):
         var = articles[i]['url'].rsplit('/', 1)[-1]
         var1 = "/".join(["google",var])
         lin.append(var1)
-        query = "/".join(["http://trueornaw.herokuapp.com",var1])
+        query = "/".join(["https://trueornaw.herokuapp.com",var1])
         q = urllib.parse.quote(query)
         parlink.append(q)
         if f"{news}" in lin:
@@ -204,7 +204,7 @@ def google():
         var = articles[i]['url'].rsplit('/', 1)[-1]
         var1 = "/".join(["google",var])
         lin.append(var1)
-        query = "/".join(["http://trueornaw.herokuapp.com",var1])
+        query = "/".join(["https://trueornaw.herokuapp.com",var1])
         q = urllib.parse.quote(query)
         parlink.append(q)
         myarticles = articles[i]
@@ -240,7 +240,7 @@ def name(country,name):
         var = articles[i]['url'].rsplit('/', 1)[-1]
         var1 = "/".join([f"{country}", f"{name}",var])
         lin.append(var1)
-        query = "/".join(["http://trueornaw.herokuapp.com",var1])
+        query = "/".join(["https://trueornaw.herokuapp.com",var1])
         q = urllib.parse.quote(query)
         parlink.append(q)
         myarticles = articles[i]
@@ -273,7 +273,7 @@ def post(country,name,post):
     parlink = []
     for i in range(len(articles)):
         lin = articles[i]['url'].rsplit('/', 1)[-1]
-        query = "/".join(["http://trueornaw.herokuapp.com",var1])
+        query = "/".join(["https://trueornaw.herokuapp.com",var1])
         q = urllib.parse.quote(query)
         parlink.append(q)
         if f"{post}" in lin:
