@@ -30,7 +30,7 @@ body {
   min-height: 350px;
   overflow-y: scroll;
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
+  
   -webkit-overflow-scrolling:touch;
 }
 .grid-row {
@@ -343,8 +343,6 @@ body {
   min-height: 500px;
   max-height: 900px;
   min-width: 300px;
-  padding-top: 20px;
-  padding-bottom: 20px;
   scroll-snap-align: center;
     transform-style: preserve-3d;
   -webkit-transition:  100ms ease-out; 
@@ -372,7 +370,10 @@ body {
   display: block;
   transition: 0.3s;
 }
-
+.container{
+scroll-snap-type: y mandatory;
+  
+}
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
   background-color: #48daa1;
