@@ -8,9 +8,13 @@ import json
 app = Flask(__name__)
 
 
-@app.route('/sw.js', methods=['GET'])
+@app.route('/js/sw.js', methods=['GET'])
 def sw():
     return app.send_static_file('sw.js')
+
+@app.route('/.well-known/assetlinks.json', methods=['GET'])
+def alj():
+    return app.send_static_file('/assetlinks.json')
 
 @app.route('/updata', methods=['GET'])
 def up():
