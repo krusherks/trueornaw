@@ -806,8 +806,9 @@ div.product-card.flip180{
             transition: all 200ms ease-out; 
 }
 .product-options{
-  padding:7px 0 0;
+  padding:7px 2px 0;
   background-color: #f7f7f7;
+  border-radius: 3px;
   transition: all 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
