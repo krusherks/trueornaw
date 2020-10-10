@@ -331,7 +331,6 @@ body {
   justify-content: center;
   text-align: left;
   position:relative; 
-  border-radius: 5px;
   overflow-x: hidden;
   background-color: #fafafa;
   top: 50%;
@@ -346,8 +345,13 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
   scroll-snap-align: center;
-  transition: all 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  box-shadow: 
+    inset 0 0 15px rgba(55, 84, 170,0),
+    inset 0 0 20px rgba(255, 255, 255,0),
+    7px 7px 15px rgba(55, 84, 170,.15),
+    -7px -7px 20px rgba(255, 255, 255,1),
+    inset 0px 0px 4px rgba(255, 255, 255,.2);
     transform-style: preserve-3d;
   -webkit-transition:  100ms ease-out; 
        -moz-transition:  100ms ease-out; 
@@ -369,7 +373,7 @@ body {
 /* The navigation menu links */
 .sidenav a {
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
   color: #242322;
   display: block;
   transition: 0.3s;
@@ -388,7 +392,7 @@ scroll-snap-type: y mandatory;
   position: absolute;
   top: 0;
   right: 25px;
-  font-size: 36px;
+  font-size: 20px;
   margin-left: 50px;
 }
 .sidenav1 { /* 100% Full-height */
@@ -410,13 +414,14 @@ scroll-snap-type: y mandatory;
 /* The navigation menu links */
 .sidenav1 a {
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
-  padding: 8px 8px 8px 24px;
+  padding: 8px 8px 8px 8px;
   color: #242322;
   position: relative;
   display: block;
   text-align: left;
+  right: -8px;
   transition: 0.3s;
   transition: all 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -447,8 +452,8 @@ scroll-snap-type: y mandatory;
   text-align: center; /* Center-align text */
   width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
   padding: 12px 0; /* Some top and bottom padding */
-  color: 242322; /* White text color */
-  font-size: 22px; /* Increased font size */
+  color: #242322; /* White text color */
+  font-size: 18px; /* Increased font size */
 }
 
 .icon-bar a:hover {
@@ -521,13 +526,14 @@ display: none;
 }
 /* The navigation menu links */
 .sidenav a {
-  padding: 8px 8px 8px 32px;
+  padding: 8px 8px 8px 8px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
+  right: -8px;
   font-weight: 600;
   color: #242322;
   display: block;
-  text-align: right;
+  text-align: left;
   transition: 0.3s;
   transition: all 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -547,7 +553,7 @@ display: none;
   display: none;
   top: 0;
   right: 25px;
-  font-size: 36px;
+  font-size: 25px;
   margin-left: 50px;
 }
 .sidenav1 {
@@ -567,7 +573,8 @@ display: none;
 /* The navigation menu links */
 .sidenav1 a {
   margin-top: 20px;
-  padding: 8px 8px 8px 24px;
+  padding: 8px 8px 8px 8px;
+  right: -8px;
   text-decoration: none;
   font-size: 25px;
   font-weight: 600;
@@ -754,16 +761,19 @@ div.product-card.flip180{
          transition:  150ms ease-out;       
 }
 
-.stats-container .product_name{
-  font-size:22px;
+.stats-container .product_name a{
+  font-size:18px;
   color:#48daa1;  
+  transition: all 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
-.stats-container .product_name:hover{
-  font-size:22px;
-  color:#48daa1;  
+.stats-container .product_name a:hover{
+  font-size:18px;
+  color:#48daa1; 
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.02); 
 }
 .stats-container p{
-  font-size:16px;
+  font-size:12px;
   color:#b1b1b3;  
   padding:2px 0 20px 0;
 }
@@ -790,7 +800,12 @@ div.product-card.flip180{
             transition: all 200ms ease-out; 
 }
 .product-options{
-  padding:2px 0 0;
+  padding:7px 0 0;
+  transition: all 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+.product-options:hover{
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.02);
 }
 a{
   text-decoration: none;
@@ -819,6 +834,7 @@ a{
 }
 .product-options span{  
   display:block;
+  font-size:12px;
   margin-bottom:8px;
 }
 
