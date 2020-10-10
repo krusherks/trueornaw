@@ -3,7 +3,7 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "xyz.appmaker.nhqbso",
+      "package_name": "news.klepto.rupaiya.one",
       "sha256_cert_fingerprints": ["66:7B:31:14:2F:75:69:A7:D1:4A:E1:E9:88:8C:C9:7F:3C:4D:2D:47:BA:39:50:4F:58:34:4D:E0:77:8D:DD:30"]
     }
   }
