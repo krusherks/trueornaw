@@ -14,7 +14,7 @@ def sw():
 
 @app.route('/.well-known/assetlinks.json', methods=['GET'])
 def alj():
-    return app.send_static_file('/assetlinks.json')
+    return app.send_static_file('./assetlinks.json')
 
 @app.route('/updata', methods=['GET'])
 def up():
