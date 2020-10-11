@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 
   <title>Klepto News</title>
-
+  <link rel="manifest" href="{{ url_for('static', filename='manifest.json')}}">
   <link rel="canonical" href="https://trueornaw.herokuapp.com/">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
@@ -33,8 +33,9 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='img/logo.jpeg')}}">
     <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/logo.jpeg')}}">
+    <script data-ad-client="ca-pub-4663002178150714" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
-<body>
+<body id=body>
 <!-- partial:index.partial.html -->
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css'><link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
@@ -45,21 +46,11 @@
 
         
   <div id="mySidenav" class="sidenav">
-    <h1 id="headerm">KLEPTO</h1>
+    <h1 id="headerm">KLEPTO News</h1>
     <a href="/">Home</a>
     <a href="/in/entertainment">Entertainment</a>
     <a href="/in/sports">Sports</a>
     <a href="/in/business">Business</a>
-    <a href="/in/health">Health</a>
-    <a href="/in/science">Science</a>
-    <a href="/us/business">US News</a>
-    <a href="/in/technology">Technology</a>
-    <a href="/techcrunch">Tech Crunch</a>
-    <a href="/wsj">WSJ</a>
-    <a href="/google">Google News</a>
-  </div>
- <div id="mySidenav1" class="sidenav1">
-    <h1 id="headerm">KLEPTO</h1>
     <a href="/in/health">Health</a>
     <a href="/in/science">Science</a>
     <a href="/us/business">US News</a>
@@ -80,39 +71,44 @@
       <i class="fa fa-times"></i>
     </a>
 </div>
-</header>
- 
 
+</header>
+
+<div class="fle">
 <!-- partial:index.partial.html -->
     <div class="container" onclick="myFunction()">
         {% for source,new, des, cont, i,link,time,lin,parlink in context %}
         <div class="product-card">
             <div class="product-front" style="top: 0;left: 0;position: fixed;">
                 <div class="shadow"></div>
-                <img src="{{i}}" style="top: 0;left: 0;position: fixed;height:60%;justify-content: center;" alt="" />
+                <img src="{{i}}" style="top: 0;right: 0;position: fixed;height:60%;justify-content: left;" alt="" />
                 <div class="sharing" id="share" style="position: fixed;bottom: 40%;display: block;">
                                 <!-- Sharingbutton Facebook -->
-<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u={{link}}" target="_blank" rel="noopener" aria-label="Facebook">
-  <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
-    </div></div>
-</a>
+                      <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u={{link}}" target="_blank" rel="noopener" aria-label="Facebook">
+                      <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+                    </div>
+                    </div>
+                      </a>
 
 <!-- Sharingbutton Twitter -->
-<a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=KLEPTO%20%7C%20News%20-%20Your%20Trusted%20API%20Driven%20News%20Site%20%3A-%20&amp;url={{link}}" target="_blank" rel="noopener" aria-label="Twitter">
-  <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z"/></svg>
+                    <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=KLEPTO%20%7C%20News%20-%20Your%20Trusted%20API%20Driven%20News%20Site%20%3A-%20&amp;url={{link}}" target="_blank" rel="noopener" aria-label="Twitter">
+                    <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z"/></svg>
     </div></div>
 </a>
 
 <!-- Sharingbutton WhatsApp -->
-<a class="resp-sharing-button__link" href="whatsapp://send?text=KLEPTO%20%7C%20News%20-%20Your%20Trusted%20API%20Driven%20News%20Site%20%3A-%20%20{{link}}" target="_blank" rel="noopener" aria-label="WhatsApp">
-  <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
-    </div></div>
-</a>
-<a><img src="{{ url_for('static', filename='img/waterm.png')}}" width="80px" style="position: fixed;right: 2px;bottom: 40%;padding-bottom: 2px;" alt=""></a>
-</div>
+                    <a class="resp-sharing-button__link" href="whatsapp://send?text=KLEPTO%20%7C%20News%20-%20Your%20Trusted%20API%20Driven%20News%20Site%20%3A-%20%20{{link}}" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
+                    </div>
+                  </div>
+                    </a>
+                    <div class="avatar">
+                        <a><img src="{{ url_for('static', filename='img/waterm.png')}}" width="80px" style="position: fixed;right: 2px;bottom: 40%;padding-bottom: 2px;" alt=""></a>
+                    </div>
+                  </div>
                 <div class="stats" style="top: 60%;left: 0;position: fixed;">         
                     <div class="stats-container">
                         <span class="product_name"><a href="{{link}}" style="text-decoration: none;">{{new}}</a></span>   
@@ -121,12 +117,26 @@
                             <p>{{cont}}</p>
                            
                         </div>                       
+                    <div class="icon-bar2">
+              <a href="{{link}}">Tap to Read</a></div>
                     </div>                         
                 </div>
             </div>   
         </div>
+        
         {% endfor %}
     </div>
+    <div id="mySidenav1" class="sidenav1">
+    <h1 id="headerm">KLEPTO</h1>
+    <a href="/in/health">Health</a>
+    <a href="/in/science">Science</a>
+    <a href="/us/business">US News</a>
+    <a href="/in/technology">Technology</a>
+    <a href="/techcrunch">Tech Crunch</a>
+    <a href="/wsj">WSJ</a>
+    <a href="/google">Google News</a>
+  </div>
+</div>
     <script type="text/javascript">
         function openNav() {
   document.getElementById("mySidenav1").style.width = "100%";
@@ -144,10 +154,10 @@
     <script>
 function myFunction() {
   var x = document.getElementById("myNAV");
-  if (x.style.display == "none") {
-    x.style.display = "block";
+  if (x.style.top == "-60px") {
+    x.style.top = "0px";
   } else {
-    x.style.display = "none";
+    x.style.top = "-60px";
   }
 }
 </script>
