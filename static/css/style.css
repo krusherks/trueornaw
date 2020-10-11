@@ -313,7 +313,7 @@ body {
   position:relative; 
   overflow-x: hidden;
   background:#f7f7f7; 
-  top: 53%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   width:100%;
@@ -322,7 +322,6 @@ body {
   min-height: 300px;
   max-height: 900px;
   min-width: 300px;
-  margin-top: 20px;
   scroll-snap-align: center;
   border-radius: 20px;
   box-shadow: 
@@ -640,7 +639,8 @@ display: none;
   top: 50%;
   left:0;
   width:97%;
-  padding:12px 12px 12px 12px; 
+  padding:12px 12px 12px 12px;
+  padding-bottom: 40px; 
   -webkit-transition: all 200ms ease-out; 
        -moz-transition: all 200ms ease-out; 
          -o-transition: all 200ms ease-out; 
