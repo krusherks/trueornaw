@@ -304,50 +304,7 @@ body {
          -o-transition: all 100ms ease-out; 
             transition: all 100ms ease-out; 
 }
-#arrow-right{
-  position: relative;
-    perspective: 800px;
-    padding-top: 5px;
-    width:110px;
-    height:110px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: white;
-    border-radius: 5px;
-    transform-style: preserve-3d;
-    transition: transform 5s;
-    position:absolute;    
-    top:50%;
-    right:25%;  
-    margin-right:-167px;
 
-}
-#arrow-right:hover{
-  background: #48daa1
-}
-
-@keyframes pulse {
-  to {
-    opacity: 0;
-    transform: scale(1);
-  }
-}
-
-.avatar::before,
-.avatar::after {
-  animation: pulse 2s linear infinite;
-  border: #fff solid 8px;
-  box-sizing: border-box;
-  content: ' ';
-  height: 140%;
-  left: -20%;
-  opacity: .6;
-  position: absolute;
-  top: -20%;
-  transform: scale(0.714);
-  width: 140%;
-  z-index: 1;
-}
 
 .product-card{
   display: flex;
@@ -360,7 +317,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  width:98%;
+  width:100%;
   max-width: 650px;
   height: 100%; 
   min-height: 350px;
