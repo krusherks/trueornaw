@@ -88,7 +88,7 @@
     <div class="container" onclick="myFunction()">
         {% for source,new, des, cont, i,link,time,lin,parlink in context %}
         <div class="product-card">
-            <div class="product-front" style="top: 0;left: 0;position: fixed;height:100%;">
+            <div class="product-front" style="top: 0;left: 0;position: fixed;">
                 <div class="shadow"></div>
                 <img src="{{i}}" style="top: 0;left: 0;position: fixed;height:60%;" alt="" />
                 <div class="sharing" id="share" style="position: fixed;bottom: 40%;display: block;">
@@ -114,8 +114,8 @@
 </a>
 <a href="/"><img src="{{ url_for('static', filename='img/waterm.png')}}" width="80px" style="position: fixed;right: 2px;bottom: 40%;padding-bottom: 2px;" alt=""></a>
 </div>
-                <div class="stats" style="top: 60%;left: 0;height:100%;position: fixed;">         
-                    <div class="stats-container" height="100%">
+                <div class="stats" style="top: 60%;left: 0;position: fixed;">         
+                    <div class="stats-container">
                         <span class="product_name"><a href="{{link}}" style="text-decoration: none;">{{new}}</a></span>   
                         <div class="product-options"> 
                         <span>{{des}}</span>                                            
