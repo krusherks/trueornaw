@@ -21,18 +21,30 @@ def up():
     newsapi = NewsApiClient(api_key="56f7ee8f6b4143269d9d2ac534374cbb")
     
     topheadlines = newsapi.get_top_headlines(country="in")
+    for i in range(len(topheadlines['articles'])):
+        if topheadlines['articles'][i]['content'] is not None:
+            topheadlines['articles'][i]['content']=topheadlines['articles'][i]['content'][0:201] 
     with open("home.json", "w") as outfile:  
         json.dump(topheadlines['articles'], outfile)
     
     topwsj = newsapi.get_everything(domains="wsj.com")
+    for i in range(len(topwsj['articles'])):
+        if topwsj['articles'][i]['content'] is not None:
+            topwsj['articles'][i]['content']=topwsj['articles'][i]['content'][0:201]
     with open("wsj.json", "w") as outfile:  
         json.dump(topwsj['articles'], outfile)
 
     toptechc = newsapi.get_top_headlines(sources="techcrunch")
+    for i in range(len(toptechc['articles'])):
+        if toptechc['articles'][i]['content'] is not None:
+            toptechc['articles'][i]['content']=toptechc['articles'][i]['content'][0:201]
     with open("techc.json", "w") as outfile:  
         json.dump(toptechc['articles'], outfile)
     
     topgoogle = newsapi.get_top_headlines(sources="google-news-in")
+    for i in range(len(topgoogle['articles'])):
+        if topgoogle['articles'][i]['content'] is not None:
+            topgoogle['articles'][i]['content']=topgoogle['articles'][i]['content'][0:201]
     with open("google.json", "w") as outfile:  
         json.dump(topgoogle['articles'], outfile)
 
