@@ -636,10 +636,10 @@ display: none;
 .stats-container{
   background:#f7f7f7;  
   position:fixed;
-  top: 40%;
+  top: 60%;
   left:0;
   width:97%;
-  height: 50%;
+  height: 40%;
   padding:12px 12px 12px 12px; 
   -webkit-transition: all 200ms ease-out; 
        -moz-transition: all 200ms ease-out; 
