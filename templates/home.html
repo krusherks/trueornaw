@@ -59,6 +59,16 @@
     <a href="/wsj">WSJ</a>
     <a href="/google">Google News</a>
   </div>
+  <div id="mySidenav1" class="sidenav1">
+    <h1 id="headerm">KLEPTO</h1>
+    <a href="/in/health">Health</a>
+    <a href="/in/science">Science</a>
+    <a href="/us/business">US News</a>
+    <a href="/in/technology">Technology</a>
+    <a href="/techcrunch">Tech Crunch</a>
+    <a href="/wsj">WSJ</a>
+    <a href="/google">Google News</a>
+  </div>
   <div class="icon-bar" id="myNAV">
   <a href="/"><i class="fa fa-home"></i></a>
   <a href="/in/entertainment"><i class="fa fa-film"></i></a>
@@ -73,15 +83,20 @@
 </div>
 
 </header>
+<<<<<<< HEAD
 
 <div class="fle">
+=======
+ 
+
+>>>>>>> parent of 0058e57... update
 <!-- partial:index.partial.html -->
     <div class="container" onclick="myFunction()">
         {% for source,new, des, cont, i,link,time,lin,parlink in context %}
         <div class="product-card">
             <div class="product-front" style="top: 0;left: 0;position: fixed;">
                 <div class="shadow"></div>
-                <img src="{{i}}" style="top: 0;right: 0;position: fixed;height:60%;justify-content: left;" alt="" />
+                <img src="{{i}}" style="top: 0;left: 0;position: fixed;height:60%;justify-content: center;" alt="" />
                 <div class="sharing" id="share" style="position: fixed;bottom: 40%;display: block;">
                                 <!-- Sharingbutton Facebook -->
                       <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u={{link}}" target="_blank" rel="noopener" aria-label="Facebook">
@@ -126,17 +141,6 @@
         
         {% endfor %}
     </div>
-    <div id="mySidenav1" class="sidenav1">
-    <h1 id="headerm">KLEPTO</h1>
-    <a href="/in/health">Health</a>
-    <a href="/in/science">Science</a>
-    <a href="/us/business">US News</a>
-    <a href="/in/technology">Technology</a>
-    <a href="/techcrunch">Tech Crunch</a>
-    <a href="/wsj">WSJ</a>
-    <a href="/google">Google News</a>
-  </div>
-</div>
     <script type="text/javascript">
         function openNav() {
   document.getElementById("mySidenav1").style.width = "100%";
@@ -154,10 +158,10 @@
     <script>
 function myFunction() {
   var x = document.getElementById("myNAV");
-  if (x.style.top == "-60px") {
-    x.style.top = "0px";
+  if (x.style.display == "none") {
+    x.style.display = "block";
   } else {
-    x.style.top = "-60px";
+    x.style.display = "none";
   }
 }
 </script>
