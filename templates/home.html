@@ -83,13 +83,6 @@
 </div>
 
 </header>
-<<<<<<< HEAD
-
-<div class="fle">
-=======
- 
-
->>>>>>> parent of 0058e57... update
 <!-- partial:index.partial.html -->
     <div class="container" onclick="myFunction()">
         {% for source,new, des, cont, i,link,time,lin,parlink in context %}
@@ -120,9 +113,8 @@
                     </div>
                   </div>
                     </a>
-                    <div class="avatar">
                         <a><img src="{{ url_for('static', filename='img/waterm.png')}}" width="80px" style="position: fixed;right: 2px;bottom: 40%;padding-bottom: 2px;" alt=""></a>
-                    </div>
+                   
                   </div>
                 <div class="stats" style="top: 60%;left: 0;position: fixed;">         
                     <div class="stats-container">
@@ -132,9 +124,6 @@
                             <p>{{cont}}</p>
                            
                         </div>                       
-                    <div class="icon-bar2">
-              <a href="{{link}}">Tap to Read</a></div>
-                    </div>                         
                 </div>
             </div>   
         </div>
