@@ -26,10 +26,8 @@ body {
   background-color: #f2f2f2;
   left: 50%;
   transform: translate(-50%,-50%);
-  margin-top: 20px;
   text-align: left;
   min-height: 350px;
-  padding-top: 20px;
   overflow-y: scroll;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling:touch;
@@ -315,7 +313,7 @@ body {
   position:relative; 
   overflow-x: hidden;
   background:#f7f7f7; 
-  top: 50%;
+  top: 53%;
   left: 50%;
   transform: translate(-50%,-50%);
   width:100%;
@@ -324,6 +322,7 @@ body {
   min-height: 300px;
   max-height: 900px;
   min-width: 300px;
+  margin-top: 20px;
   scroll-snap-align: center;
   border-radius: 20px;
   box-shadow: 
