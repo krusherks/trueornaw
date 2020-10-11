@@ -417,7 +417,7 @@ body {
   width: 100%; /* Full-width */
   background-color: #f7f7f7; /* Dark-grey background */
   overflow: auto; /* Overflow due to float */
-  bottom: 0px;
+  top: -70px;
   z-index: 1;
   position: fixed;
   overflow-x: hidden;
@@ -431,7 +431,7 @@ body {
   width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
   padding: 12px 0; /* Some top and bottom padding */
   color: #242322; /* White text color */
-  font-size: 20px; /* Increased font size */
+  font-size: 18px; /* Increased font size */
   margin-bottom: 10px;
 }
 
