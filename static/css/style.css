@@ -421,38 +421,14 @@ body {
   width: 100%; /* Full-width */
   background-color: #f7f7f7; /* Dark-grey background */
   overflow: auto; /* Overflow due to float */
-  top: 0;
-  display: none;
+  top: -70px;
   z-index: 1;
   position: fixed;
   overflow-x: hidden;
   transition: top 0.3s;
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.02); 
 }
-.icon-bar2 {
-  width: 100%; /* Full-width */
-  background-image: linear-gradient(rgba(247, 247, 247,0.7),rgba(247, 247, 247,1)); /* Dark-grey background */
-  overflow: auto; /* Overflow due to float */
-  bottom: 0px;
-  z-index: 2;
-  position: fixed;
-  overflow-x: hidden;
-  transition: top 0.3s;
-}
-.icon-bar2 a {
-  float: left; /* Float links side by side */
-  text-align: center; /* Center-align text */
-  width: 100%; /* Equal width (5 icons with 20% width each = 100%) */
-  padding: 12px 0; /* Some top and bottom padding */
-  color: #242322; /* White text color */
-  font-size: 22px; /* Increased font size */
-  font-weight: bold;
-  margin-bottom: 15px;
-}
 
-.icon-bar2 a:hover {
-  color: #48daa1; /* Add a hover color */
-}
 .icon-bar a {
   float: left; /* Float links side by side */
   text-align: center; /* Center-align text */
