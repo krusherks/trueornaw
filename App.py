@@ -70,9 +70,9 @@ def bbc():
     for i in range(len(articles)):
         lin.append(articles[i]['url'].rsplit('/', 1)[-1])
         var = articles[i]['url'].rsplit('/', 1)[-1]
-        var1 = "/".join([blog,var])
+        var1 = "/".join(["https://trueornaw.herokuapp.com",blog,var])
         q = urllib.parse.quote(var1)
-        parlink.append(q)
+        parlink.append(var1)
         myarticles = articles[i]
         source.append(myarticles['author'])
         news.append(myarticles['title'])
