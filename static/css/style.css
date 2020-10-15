@@ -642,7 +642,7 @@ display: none;
 .stats-container{
   background:#f7f7f7;  
   position:fixed;
-  top: 60%;
+  top: 50%;
   left:0;
   width:97%;
   height: 40%;
