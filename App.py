@@ -68,7 +68,7 @@ def bbc():
     parlink = []
 
     for i in range(len(articles)):
-        lin.append("/".join([blog,articles[i]['url'].rsplit('/', 1)[-1]])
+        lin.append("/".join([blog,articles[i]['url'].rsplit('/', 1)[-1]]))
         var = articles[i]['url'].rsplit('/', 1)[-1]
         var1 = "/".join(["https://trueornaw.herokuapp.com",blog,var])
         q = urllib.parse.quote(var1)
