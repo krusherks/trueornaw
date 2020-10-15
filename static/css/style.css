@@ -423,7 +423,7 @@ body {
   width: 100%; /* Full-width */
   background-color: #f7f7f7; /* Dark-grey background */
   overflow: auto; /* Overflow due to float */
-  top: -70px;
+  top: 0px;
   z-index: 1;
   position: fixed;
   overflow-x: hidden;

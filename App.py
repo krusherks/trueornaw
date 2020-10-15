@@ -56,6 +56,7 @@ def bbc():
         data = json.load(json_file) 
 
     articles = data
+    blog="blog"
     desc = []
     news = []
     img = []
@@ -68,8 +69,9 @@ def bbc():
 
     for i in range(len(articles)):
         lin.append(articles[i]['url'].rsplit('/', 1)[-1])
-        query = "/".join(["https://trueornaw.herokuapp.com",articles[i]['url'].rsplit('/', 1)[-1]])
-        q = urllib.parse.quote(query)
+        var = articles[i]['url'].rsplit('/', 1)[-1]
+        var1 = "/".join([blog,var])
+        q = urllib.parse.quote(var1)
         parlink.append(q)
         myarticles = articles[i]
         source.append(myarticles['author'])
@@ -266,6 +268,7 @@ def name(country,name):
     
     return render_template('index.html', context=mylist)    
 
+
 @app.route('/<string:country>/<string:name>/<string:post>')
 def post(country,name,post):
     newsapi = NewsApiClient(api_key="56f7ee8f6b4143269d9d2ac534374cbb")
@@ -283,6 +286,8 @@ def post(country,name,post):
     parlink = []
     for i in range(len(articles)):
         lin = articles[i]['url'].rsplit('/', 1)[-1]
+        var = articles[i]['url'].rsplit('/', 1)[-1]
+        var1 = "/".join([f"{country}", f"{name}",var])
         query = "/".join(["https://trueornaw.herokuapp.com",var1])
         q = urllib.parse.quote(query)
         parlink.append(q)
@@ -299,6 +304,41 @@ def post(country,name,post):
 
     mylist = zip(source, news, desc, cont, img, link, time, lin,parlink)
     return render_template('blog.html', context=mylist)
+
+@app.route('/blog/<string:post>')
+def bpost(post):
+    with open('home.json') as json_file: 
+        data = json.load(json_file) 
+
+    articles = data
+    desc = []
+    news = []
+    img = []
+    source = []
+    link = []
+    time = []
+    cont = []
+    lin = []
+    parlink = []
+    for i in range(len(articles)):
+        lin = articles[i]['url'].rsplit('/', 1)[-1]
+        query = "/".join(["https://trueornaw.herokuapp.com","blog",lin])
+        q = urllib.parse.quote(query)
+        parlink.append(q)
+        if f"{post}" in lin:
+    
+            myarticles = articles[i]
+            source.append(myarticles['author'])
+            news.append(myarticles['title'])
+            desc.append(myarticles['description'])
+            cont.append(myarticles['content'])
+            img.append(myarticles['urlToImage'])
+            link.append(myarticles['url'])
+            time.append(myarticles['publishedAt'])
+
+    mylist = zip(source, news, desc, cont, img, link, time, lin,parlink)
+    return render_template('blog.html', context=mylist)
+
 
 if __name__ == "__main__":
     app.run()
