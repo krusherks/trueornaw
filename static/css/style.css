@@ -31,7 +31,6 @@ body {
   overflow-y: scroll;
   margin-top: 50px;
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
   -webkit-overflow-scrolling:touch;
 }
 .grid-row {
@@ -372,6 +371,10 @@ body {
   right: 25px;
   font-size: 20px;
   margin-left: 50px;
+}
+.container{
+  
+  scroll-snap-type: y mandatory;
 }
 .sidenav1 { /* 100% Full-height */
   width: 0px; /* 0 width - change this with JavaScript */
